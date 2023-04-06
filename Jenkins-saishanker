@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage("Git Checkout"){
             steps{
-                git branch: 'sai', credentialsId: 'sharath', url: 'https://github.com/SAISHARMA9804/myweb.git'
+                git credentialsId: '5152504a-9a16-4aa4-93eb-47c61490912c', url: 'https://github.com/saisss12/GCP-Test'
             }
         }
         stage("Maven Build"){
