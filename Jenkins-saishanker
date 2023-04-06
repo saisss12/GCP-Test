@@ -20,11 +20,11 @@ pipeline{
             steps{
                sshagent(['sai-2']) {
                 sh """
-                    scp -o StrictHostKeyChecking=no target/myweb.war  root@tomcat-instance:/home/ec2-user/apache-tomcat-9.0.73/webapps/
+                    scp -o StrictHostKeyChecking=no target/myweb.war  root@tomcat-instance:/home/apache-tomcat-9.0.73/webapps/
                     
-                    ssh root@tomcat-instance /home/ec2-user/apache-tomcat-9.0.73/bin/shutdown.sh
+                    ssh root@tomcat-instance /home/apache-tomcat-9.0.73/bin/shutdown.sh
                     
-                    ssh root@tomcat-instance /home/ec2-user/apache-tomcat-9.0.73/bin/startup.sh
+                    ssh root@tomcat-instance /home/apache-tomcat-9.0.73/bin/startup.sh
                 
                 """
             }
