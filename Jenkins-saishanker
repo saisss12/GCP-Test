@@ -18,7 +18,7 @@ pipeline{
         }
         stage("deploy-dev"){
             steps{
-               sshagent(['sai-1']) {
+               sshagent(['sai-2']) {
                 sh """
                     scp -o StrictHostKeyChecking=no target/myweb.war  root@tomcat-instance:/home/ec2-user/apache-tomcat-9.0.73/webapps/
                     
